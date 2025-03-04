@@ -1,0 +1,197 @@
+/* Style de la section Parcours */
+.section-parcours {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+}
+
+/* Conteneur de la section Parcours */
+.container-parcours {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Titre de la section */
+.section-parcours h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 40px;
+}
+
+/* Style pour la frise chronologique */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* Chaque élément de la frise */
+.timeline-item {
+    position: relative;
+    width: 80%;
+    /* Largeur de chaque élément de la timeline */
+    margin-bottom: 50px;
+}
+
+/* Marqueur circulaire de la frise */
+.timeline-marker {
+    position: absolute;
+    left: -30px;
+    /* Décaler le marqueur à gauche */
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 3px solid #003366;
+}
+
+/* Contenu de chaque événement */
+.timeline-content {
+    background-color: #fff;
+    color: #003366;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 40px);
+    /* Réduire la largeur pour laisser de l'espace autour */
+    margin-left: 30px;
+    position: relative;
+}
+
+.timeline-content h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Style du texte de chaque événement */
+.timeline-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    /* espacement vertical */
+}
+
+/* Ligne reliant les événements de la frise */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #fff;
+    transform: translateX(-50%);
+}
+
+/* MEDIA QUERIES POUR LES ÉCRANS PLUS PETITS */
+
+/* Pour les tablettes (max-width: 768px) */
+@media (max-width: 768px) {
+    .section-parcours h2 {
+        font-size: 2rem;
+        /* Réduit la taille du titre */
+    }
+
+    .timeline-item {
+        width: 90%;
+        /* Réduit la largeur des éléments pour mieux s'adapter à l'écran */
+        margin-bottom: 30px;
+        /* Réduit l'espace entre les éléments */
+    }
+
+    .timeline-content {
+        width: 100%;
+        /* Prend toute la largeur disponible */
+        margin-left: 0;
+        /* Aligne le contenu avec le marqueur */
+        padding: 15px;
+        /* Réduit l'espace autour du contenu */
+    }
+
+    .timeline-content h3 {
+        font-size: 1.4rem;
+        /* Réduit la taille des titres */
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
+        /* Réduit la taille du texte */
+    }
+
+    .timeline-marker {
+        left: -20px;
+        /* Ajuste le marqueur */
+    }
+
+    .timeline-item::before {
+        left: 15px;
+        /* Modifie la ligne de liaison */
+        width: 1px;
+        /* Réduit l'épaisseur de la ligne */
+    }
+}
+
+/* Pour les smartphones (max-width: 480px) */
+@media (max-width: 480px) {
+    .section-parcours h2 {
+        font-size: 1.5rem;
+        /* Réduit davantage la taille du titre */
+    }
+
+    .timeline-item {
+        width: 95%;
+        /* Prend presque toute la largeur */
+        margin-bottom: 20px;
+        /* Réduit l'espace entre les éléments */
+    }
+
+    .timeline-content {
+        width: 100%;
+        /* Prend toute la largeur */
+        margin-left: 0;
+        /* Aligne tout à gauche */
+        padding: 10px;
+        /* Réduit le padding autour du contenu */
+    }
+
+    .timeline-content h3 {
+        font-size: 1.2rem;
+        /* Réduit la taille du titre */
+    }
+
+    .timeline-content p {
+        font-size: 0.85rem;
+        /* Réduit la taille du texte */
+    }
+
+    .timeline-marker {
+        left: -15px;
+        /* Réduit l'espace entre le marqueur et l'événement */
+    }
+
+    .timeline-item::before {
+        left: 10px;
+        /* Réduit la ligne de liaison */
+        width: 1px;
+        /* Réduit l'épaisseur de la ligne */
+    }
+}
+
+@media (max-width: 1920px) {
+
+    /* Ajoutez vos styles ici pour des écrans de 1920px ou moins */
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+}

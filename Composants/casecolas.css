@@ -1,0 +1,152 @@
+.section-entreprise {
+    background-color: #fbfcfa;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50vh;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0px;
+    margin-bottom: 90px;
+    transform: translateY(30px);
+}
+
+.container-entreprise {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 0px;
+    height: 100%;
+}
+
+.case {
+    width: 220px;
+    height: 220px;
+    background-color: transparent;
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.case-content {
+    transform: rotate(-45deg);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.case h2 {
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    word-wrap: break-word;
+    max-width: 90%;
+}
+
+.case p {
+    font-size: 0.9rem;
+    margin: 5px 0 0 0;
+    padding: 0 5px;
+    line-height: 1.3;
+    display: none;
+}
+
+.case:hover p {
+    display: block;
+}
+
+.case:nth-child(odd) {
+    background-color: #ffcc00;
+    color: black;
+}
+
+.case:nth-child(even) {
+    background-color: black;
+    color: #ffcc00;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 60px;
+    }
+
+    .container-entreprise {
+        gap: 30px;
+    }
+
+    .case {
+        width: 150px;
+        height: 150px;
+    }
+
+    .case h2 {
+        font-size: 0.9rem;
+    }
+
+    .case p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+    }
+
+    .container-entreprise {
+        gap: 20px;
+    }
+
+    .case {
+        width: 120px;
+        height: 120px;
+    }
+
+    .case h2 {
+        font-size: 0.8rem;
+    }
+
+    .case p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 100px;
+    }
+
+    .container-entreprise {
+        gap: 60px;
+    }
+
+    .case {
+        width: 250px;
+        height: 250px;
+    }
+
+    .case h2 {
+        font-size: 1.2rem;
+    }
+}

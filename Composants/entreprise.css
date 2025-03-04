@@ -1,0 +1,105 @@
+.section-entreprise {
+    padding: 50px 0;
+    background-color: #f5f5f5;
+}
+
+.container-entreprise {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.case {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.case-content {
+    text-align: center;
+}
+
+.case-content h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.case-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.valeur {
+    grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+    .container-entreprise {
+        grid-template-columns: 1fr;
+    }
+    
+    .valeur {
+        grid-column: span 1;
+    }
+}
+
+/* Styles pour la section présentation */
+.section-presentation {
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.presentation-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.presentation-image {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.presentation-text {
+    flex: 1;
+}
+
+.presentation-text h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.presentation-text p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+@media (max-width: 768px) {
+    .presentation-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .presentation-image {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}

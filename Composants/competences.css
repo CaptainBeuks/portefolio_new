@@ -1,0 +1,182 @@
+.section-competences {
+    background: #fbfcfa;
+    color: rgb(50, 50, 50);
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.container-competences {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Titre des compétences */
+.section-competences h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.competence-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    /* Permettre aux logos de se répartir sur plusieurs lignes si nécessaire */
+}
+
+.competence {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background: #ffffff;
+    border-radius: 20%;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Ombre légère autour des logos */
+    transition: transform 0.3s ease-in-out;
+    /* Effet de scale lors du hover */
+}
+
+.competence:hover {
+    transform: scale(1.2);
+}
+
+.competence img {
+    width: 50px;
+    height: auto;
+}
+
+.competence p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: rgb(50, 50, 50);
+    font-weight: bold;
+    /* Mettre le texte en gras */
+}
+
+/* MEDIA QUERIES POUR LES ÉCRANS PLUS PETITS */
+
+/* Pour les tablettes (max-width: 768px) */
+@media (max-width: 768px) {
+    .section-competences h2 {
+        font-size: 2rem;
+        /* Réduit la taille du titre */
+        margin-bottom: 30px;
+        /* Réduit la marge du bas */
+    }
+
+    .competence-icons {
+        gap: 20px;
+        /* Réduit l'écart entre les icônes */
+    }
+
+    .competence {
+        width: 60px;
+        /* Réduit la taille des compétences */
+        height: 60px;
+        padding: 15px;
+        /* Réduit l'espace autour des icônes */
+    }
+
+    .competence img {
+        width: 40px;
+        /* Réduit la taille des icônes */
+    }
+
+    .competence p {
+        font-size: 1rem;
+        /* Réduit la taille du texte */
+    }
+}
+
+/* Pour les smartphones (max-width: 480px) */
+@media (max-width: 480px) {
+    .section-competences {
+        padding-top: 50px;
+        /* Réduit le padding pour plus de contenu visible */
+        padding-bottom: 50px;
+    }
+
+    .section-competences h2 {
+        font-size: 1.5rem;
+        /* Réduit encore la taille du titre */
+        margin-bottom: 20px;
+    }
+
+    .competence-icons {
+        gap: 15px;
+        /* Réduit l'écart entre les icônes */
+    }
+
+    .competence {
+        width: 50px;
+        /* Réduit encore la taille des compétences */
+        height: 50px;
+        padding: 10px;
+        /* Réduit l'espace autour des icônes */
+    }
+
+    .competence img {
+        width: 35px;
+        /* Réduit la taille des icônes */
+    }
+
+    .competence p {
+        font-size: 0.9rem;
+        /* Réduit la taille du texte */
+    }
+}
+
+/* Pour les grands écrans (plus de 1200px) */
+@media (min-width: 1200px) {
+    .section-competences h2 {
+        font-size: 3.5rem;
+        /* Augmente la taille du titre */
+        margin-bottom: 60px;
+        /* Augmente la marge du bas */
+    }
+
+    .competence {
+        width: 100px;
+        /* Augmente la taille des compétences */
+        height: 100px;
+        padding: 25px;
+        /* Augmente l'espace autour des icônes */
+    }
+
+    .competence img {
+        width: 60px;
+        /* Augmente la taille des icônes */
+    }
+
+    .competence p {
+        font-size: 1.5rem;
+        /* Augmente la taille du texte */
+    }
+}
+
+@media (max-width: 1920px) {
+
+    /* Ajoutez vos styles ici pour des écrans de 1920px ou moins */
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+}

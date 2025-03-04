@@ -1,0 +1,145 @@
+/* Style de la section Accueil */
+.section-accueil {
+    background: linear-gradient(to bottom, #003366, #00aeff);
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* Conteneur de la section Accueil */
+.container-accueil {
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    margin-top: -10%;
+}
+
+/* Titre de la section */
+.section-accueil h1 {
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Texte de la section */
+.section-accueil p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Conteneur des boutons */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* Style des boutons */
+.btn-cv,
+.btn-contact {
+    display: inline-block;
+    background-color: white;
+    color: #003366;
+    text-decoration: none;
+    padding: 15px 40px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: transform 0.3s ease-in-out;
+    /* Effet de scale lors du hover */
+}
+
+/* Effet de hover pour les boutons */
+.btn-cv:hover,
+.btn-contact:hover {
+    transform: scale(1.25);
+    /* Agrandir le bouton au survol */
+}
+
+/* Style pour les boutons lors du survol */
+.btn-cv:hover,
+.btn-contact:hover {
+    cursor: pointer;
+    /* Changer le curseur pour indiquer que c'est un bouton cliquable */
+}
+
+/* MEDIA QUERIES POUR LES ÉCRANS PLUS PETITS */
+
+/* Pour les tablettes (max-width: 768px) */
+@media (max-width: 768px) {
+    .section-accueil h1 {
+        font-size: 3.5rem;
+        /* Réduit la taille du titre sur les tablettes */
+    }
+
+    .section-accueil p {
+        font-size: 1rem;
+        /* Réduit la taille du texte sur les tablettes */
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        /* Les boutons seront empilés verticalement sur les tablettes */
+        gap: 20px;
+        /* Réduit l'écart entre les boutons */
+    }
+
+    .btn-cv,
+    .btn-contact {
+        padding: 12px 30px;
+        /* Ajuste la taille des boutons pour les tablettes */
+        font-size: 1.2rem;
+        /* Réduit la taille du texte des boutons */
+    }
+}
+
+/* Pour les smartphones (max-width: 480px) */
+@media (max-width: 480px) {
+    .section-accueil h1 {
+        font-size: 2.5rem;
+        /* Réduit encore la taille du titre sur les smartphones */
+    }
+
+    .section-accueil p {
+        font-size: 0.9rem;
+        /* Réduit la taille du texte sur les smartphones */
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        /* Les boutons seront empilés verticalement */
+        gap: 15px;
+        /* Réduit l'écart entre les boutons */
+    }
+
+    .btn-cv,
+    .btn-contact {
+        padding: 10px 25px;
+        /* Réduit encore la taille des boutons */
+        font-size: 1rem;
+        /* Réduit la taille du texte des boutons */
+    }
+}
+
+@media (max-width: 1920px) {
+
+    /* Ajoutez vos styles ici pour des écrans de 1920px ou moins */
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+}

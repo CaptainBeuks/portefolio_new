@@ -1,0 +1,115 @@
+.realisation-section {
+    padding: 60px 20px;
+    background-color: #fafafa;
+    text-align: center;
+}
+
+.section-title-realisation {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.realisation-list {
+    list-style-type: none;
+    /* Enlève les petits points */
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+    color: #555;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.realisation-item {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Effet au survol de chaque projet */
+.realisation-item:hover {
+    background-color: #000000;
+    transform: translateY(-5px);
+}
+
+/* Styles responsives */
+@media (max-width: 1440px) {
+    .section-title-realisation {
+        font-size: 2.2rem;
+    }
+
+    .realisation-list {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+
+    .realisation-item {
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .section-title-realisation {
+        font-size: 2rem;
+    }
+
+    .realisation-list {
+        font-size: 1rem;
+    }
+
+    .realisation-item {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title-realisation {
+        font-size: 1.8rem;
+    }
+
+    .realisation-list {
+        font-size: 0.9rem;
+    }
+
+    .realisation-item {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title-realisation {
+        font-size: 1.5rem;
+    }
+
+    .realisation-list {
+        font-size: 0.8rem;
+    }
+
+    .realisation-item {
+        padding: 6px 8px;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 1920px) {
+
+    /* Ajoutez vos styles ici pour des écrans de 1920px ou moins */
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+}

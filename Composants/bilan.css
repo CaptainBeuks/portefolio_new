@@ -1,0 +1,100 @@
+.bilan-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.bilan-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.bilan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.bilan-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.bilan-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #007bff, #00ff88);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.bilan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.bilan-card:hover::before {
+    transform: scaleX(1);
+}
+
+.bilan-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.bilan-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.bilan-card .number {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.bilan-card:hover .number {
+    color: rgba(0,123,255,0.2);
+    transform: scale(1.2);
+}
+
+.bilan-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+    transition: all 0.3s ease;
+}
+
+.bilan-card:hover .icon {
+    transform: rotate(360deg);
+}
+
+@media (max-width: 768px) {
+    .bilan-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .bilan-card {
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,196 @@
+/* Style global */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Bloc de navigation */
+.block-nav {
+    background-color: #003366;
+    padding: 2rem 12%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Structure de navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Permet de mieux gérer l'espace sur les petits écrans */
+}
+
+/* Image du logo */
+nav img.MOI {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Liste de navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style des éléments de la liste */
+nav ul li {
+    margin: 0 30px;
+}
+
+/* Style des liens (sauf bouton "Bilan") */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Effet de survol avec soulignement blanc progressif (sauf pour bouton "Bilan") */
+nav ul li a:not(.button-bilan):hover {
+    color: white;
+}
+
+nav ul li a:not(.button-bilan)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    /* Commence à 0 pour l'animation */
+    height: 3px;
+    background-color: white;
+    transition: width 0.4s ease;
+    /* Animation fluide de la largeur */
+}
+
+nav ul li a:not(.button-bilan):hover::after {
+    width: 100%;
+}
+
+/* Style du bouton "Bilan" */
+.button-bilan {
+    padding: 8px 16px;
+    border: 2px solid white;
+    /* Bordure blanche */
+    border-radius: 40px;
+    /* Bords arrondis */
+    color: #003366;
+    background-color: #ffffff;
+    /* Même couleur que la barre de navigation */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-bilan:hover {
+    background-color: white;
+    color: #003366;
+}
+
+/* MEDIA QUERIES POUR LES ÉCRANS PLUS PETITS */
+
+/* Pour les tablettes (max-width: 768px) */
+@media (max-width: 768px) {
+    .block-nav {
+        padding: 1.5rem 8%;
+        /* Réduit l'espace de padding */
+    }
+
+    nav {
+        flex-direction: column;
+        /* Met les éléments en colonne */
+        align-items: flex-start;
+        /* Aligne les éléments au début */
+    }
+
+    nav img.MOI {
+        width: 80px;
+        /* Réduit la taille du logo */
+        height: 80px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        /* Met les liens en colonne */
+        align-items: flex-start;
+        /* Aligne les éléments à gauche */
+        margin-top: 15px;
+        /* Ajoute un peu d'espace entre le logo et les liens */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        /* Réduit l'espace entre les éléments */
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        /* Réduit la taille des liens */
+    }
+}
+
+/* Pour les smartphones (max-width: 480px) */
+@media (max-width: 480px) {
+    .block-nav {
+        padding: 1rem 5%;
+        /* Réduit encore plus l'espace de padding */
+    }
+
+    nav {
+        flex-direction: column;
+        /* En colonne sur les petits écrans */
+        align-items: center;
+        /* Centrer les éléments */
+    }
+
+    nav img.MOI {
+        width: 60px;
+        /* Réduit encore la taille du logo */
+        height: 60px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        /* En colonne */
+        align-items: center;
+        /* Centrer les éléments */
+        width: 100%;
+        /* Les liens prennent toute la largeur */
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+        /* Réduit encore l'espace entre les liens */
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        /* Réduit la taille des liens */
+    }
+
+    .button-bilan {
+        font-size: 18px;
+        /* Réduit la taille du bouton "Bilan" */
+    }
+}
+
+@media (max-width: 1920px) {
+
+    /* Ajoutez vos styles ici pour des écrans de 1920px ou moins */
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+}

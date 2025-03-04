@@ -1,0 +1,204 @@
+.section-resume {
+    background: #fbfcfa;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    text-align: center;
+    padding: 60px 0;
+    margin: 0;
+}
+
+.container-resume {
+    padding: 40px 10%;
+    text-align: center;
+}
+
+.page-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.page-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.page-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.page-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.page-card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.page-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* MEDIA QUERIES POUR LES ÉCRANS PLUS PETITS */
+
+/* Pour les tablettes (max-width: 768px) */
+@media (max-width: 768px) {
+    .section-resume {
+        min-height: auto;
+        /* Ajuste la hauteur pour les tablettes */
+    }
+
+    .container-resume {
+        padding: 40px 5%;
+        /* Réduit les marges internes */
+    }
+
+    .page-cards {
+        gap: 15px;
+        /* Réduit l'écart entre les cartes */
+    }
+
+    .page-card {
+        width: 200px;
+        /* Réduit la largeur des cartes */
+        padding: 15px;
+        /* Réduit le padding */
+    }
+
+    .page-icon {
+        width: 60px;
+        /* Réduit la taille des icônes */
+        height: 60px;
+        /* Réduit la taille des icônes */
+    }
+
+    .page-card h3 {
+        font-size: 18px;
+        /* Réduit la taille du titre */
+    }
+
+    .page-card p {
+        font-size: 14px;
+        /* Réduit la taille du texte */
+    }
+}
+
+/* Pour les smartphones (max-width: 480px) */
+@media (max-width: 480px) {
+    .section-resume {
+        min-height: auto;
+        /* Ajuste la hauteur pour les petits écrans */
+    }
+
+    .container-resume {
+        padding: 40px 5%;
+        /* Réduit les marges internes */
+    }
+
+    .page-cards {
+        gap: 10px;
+        /* Réduit l'écart entre les cartes */
+        flex-direction: column;
+        /* Aligne les cartes en colonne */
+    }
+
+    .page-card {
+        width: 100%;
+        /* Prend toute la largeur disponible */
+        padding: 10px;
+        /* Réduit le padding */
+    }
+
+    .page-icon {
+        width: 50px;
+        /* Réduit la taille des icônes */
+        height: 50px;
+        /* Réduit la taille des icônes */
+    }
+
+    .page-card h3 {
+        font-size: 16px;
+        /* Réduit la taille du titre */
+    }
+
+    .page-card p {
+        font-size: 12px;
+        /* Réduit la taille du texte */
+    }
+}
+
+/* Pour les grands écrans (min-width: 1200px) */
+@media (min-width: 1200px) {
+    .section-resume {
+        min-height: 60vh;
+        /* Maintient la hauteur pour les grands écrans */
+    }
+
+    .container-resume {
+        padding: 40px 10%;
+        /* Maintient le padding pour les grands écrans */
+    }
+
+    .page-cards {
+        gap: 25px;
+        /* Augmente l'écart entre les cartes */
+    }
+
+    .page-card {
+        width: 280px;
+        /* Augmente la largeur des cartes */
+        padding: 25px;
+        /* Augmente le padding */
+    }
+
+    .page-icon {
+        width: 90px;
+        /* Augmente la taille des icônes */
+        height: 90px;
+        /* Augmente la taille des icônes */
+    }
+
+    .page-card h3 {
+        font-size: 22px;
+        /* Augmente la taille du titre */
+    }
+
+    .page-card p {
+        font-size: 18px;
+        /* Augmente la taille du texte */
+    }
+}
+
+@media (max-width: 1920px) {
+
+    /* Ajoutez vos styles ici pour des écrans de 1920px ou moins */
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+}
