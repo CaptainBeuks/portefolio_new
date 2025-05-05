@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Composants/navbar.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>E6 - Portfolio Mahdi</title>
+    <style>
+        .e6-main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 70vh;
+        }
+        .e6-cards {
+            display: flex;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .e6-card {
+            background: #f5f5f5;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            padding: 2.5rem 2rem;
+            min-width: 220px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #222;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            border: 2px solid #e0e0e0;
+        }
+        .e6-card:hover {
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+            border-color: #007bff;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="block-nav">
+            <nav>
+                <img src="../IMG/MAHDI.png" class="MOI" alt="Logo">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="entreprise.html">Entreprise</a></li>
+                    <li><a href="veille.html">Veille</a></li>
+                    <li><a href="réalisation.html">Réalisation</a></li>
+                    <li><a href="bilan.html">Bilan</a></li>
+                    <li><a href="E6.html" class="active">E6</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="e6-main">
+        <h1>E6 : Outils et Solutions</h1>
+        <div class="e6-cards" id="main-cards">
+            <button class="e6-card" onclick="showPDFs('zabbix')">Outil de supervision Zabbix</button>
+            <button class="e6-card" onclick="showPDFs('rdweb')">RDWEB</button>
+        </div>
+        <div class="e6-cards" id="pdf-cards" style="display:none;"></div>
+        <button id="back-btn" style="display:none;margin-top:2rem;" onclick="backToMain()">Retour</button>
+    </main>
+    <script>
+        const pdfData = {
+            zabbix: [
+                { name: 'Présentation Zabbix', url: '../APs/Zabbix-grafna.pdf' },
+                { name: 'Procédure Zabbix', url: '../APs/Zabbix-procedure.pdf' },
+                { name: 'Topologie Zabbix', url: '../APs/infra_assurmer.drawio.pdf' }
+            ],
+            rdweb: [
+                { name: 'Procédure RDS', url: '../APs/procedureRDSAP7.pdf' },
+                { name: 'Présentation RDS', url: '../APs/PrésentationRDSAP7.pdf' }
+            ]
+        };
+        function showPDFs(key) {
+            document.getElementById('main-cards').style.display = 'none';
+            const pdfCards = document.getElementById('pdf-cards');
+            pdfCards.innerHTML = pdfData[key].map(pdf => `<a href="${pdf.url}" class="e6-card" target="_blank">${pdf.name}</a>`).join('');
+            pdfCards.style.display = 'flex';
+            document.getElementById('back-btn').style.display = 'block';
+        }
+        function backToMain() {
+            document.getElementById('pdf-cards').style.display = 'none';
+            document.getElementById('main-cards').style.display = 'flex';
+            document.getElementById('back-btn').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
